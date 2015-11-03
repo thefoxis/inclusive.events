@@ -1,0 +1,14 @@
+{
+  "globals": {
+    "title": "Inclusive Events",
+    "name": "Inclusive Events",
+    "description": "",
+    "author": "Karolina Szczur",
+    "uri": "http://inclusive.events",
+    "repository": "https://github.com/thefoxis/inclusive.events",
+    "version": "0.0.1",
+    "service": {
+      "analytics": "GSN-501160-B"
+    }
+  }
+}
