@@ -16,9 +16,10 @@ html(lang="en")
       
   body
     .container-fluid
+      != partial("_shared/header")
       != yield
     
-      != partial("_shared/mailchimp")
+      //- != partial("_shared/mailchimp")
       != partial("_shared/footer")
       
     != partial("_shared/analytics")
