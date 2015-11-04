@@ -1,0 +1,8 @@
+{
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "latest",
+    "browser-sync": "latest",
+    "harp": "latest"
+  }
+}
