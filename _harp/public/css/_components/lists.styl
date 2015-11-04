@@ -13,6 +13,11 @@
   
   li
     display: inline-block
-  
+
+.list-spaced-narrow
+  li:not(:last-child)
+    margin-right: $spacing-narrow
+    
+.list-spaced-base
   li:not(:last-child)
     margin-right: $spacing-base
