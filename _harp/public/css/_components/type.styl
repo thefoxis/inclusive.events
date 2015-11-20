@@ -16,17 +16,21 @@
   h1, h2, h3, h4, h5 
     font-family: $font-family-soleil
     font-weight: $font-weight-regular-headings
+
+h1, h2, h3, h4, h5, strong
+  color: black
     
 h1, h2, h3, h4, h5 
-  color: black
+  margin: $spacing 0
   line-height: $line-height-headings
   
 body
   font-size: $font-size-base
   line-height: $line-height-base
   
-p
-  margin-bottom: $spacing-wide
+p, ul
+  margin-top: 0
+  margin-bottom: $spacing
   
 h1
   font-size: $font-size-h1
@@ -57,5 +61,11 @@ h4
   
 .txt-lg
   font-size: $font-size-lg
-  line-height: 1.25
+  line-height: 1.4
+  
+.highlight
+  display: inline-block
+  padding: 2px 5px
+  background-color: yellow
+  color: $gray-light
   
