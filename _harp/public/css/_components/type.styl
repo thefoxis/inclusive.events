@@ -4,35 +4,41 @@
 *
 --------------------------------------------------------------------*/
 
-.wf-loading body
-  font-family: $font-family-sans-fallback
-
 .wf-loading 
+  body,
   h1, h2, h3, h4, h5
-    font-family: $font-family-serif-fallback
+    font-family: $font-family-sans-fallback
 
 .wf-active body
-  font-family: $font-family-dagny
+  font-family: $font-family-acumin
 
 .wf-active
   h1, h2, h3, h4, h5 
-    font-family: $font-family-meta-serif
+    font-family: $font-family-soleil
+    font-weight: $font-weight-regular-headings
     
 h1, h2, h3, h4, h5 
+  color: black
   line-height: $line-height-headings
   
 body
   font-size: $font-size-base
   line-height: $line-height-base
   
+p
+  margin-bottom: $spacing-wide
+  
 h1
   font-size: $font-size-h1
-  
+
 h2
   font-size: $font-size-h2
   
 h3
   font-size: $font-size-h3
+  
+h4
+  font-size: $font-size-h4
   
 .txt-up
   text-transform: uppercase
@@ -51,4 +57,5 @@ h3
   
 .txt-lg
   font-size: $font-size-lg
+  line-height: 1.25
   
