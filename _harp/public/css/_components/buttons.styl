@@ -8,6 +8,7 @@
   display: inline-block
   border: none
   border-radius: 3px
+  min-width: 200px
   padding: $spacing-sm $spacing
   text-align: center
   cursor: pointer
@@ -23,3 +24,9 @@
   
   &:focus
     outline: none
+    
+@media screen and (max-width: 48em)
+
+  .button
+    width: 100%
+    box-sizing: border-box

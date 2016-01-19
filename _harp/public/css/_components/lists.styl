@@ -18,7 +18,32 @@
   li:not(:last-child)
     margin-right: $spacing-sm
     
-.list-spaced-base
+.list-counter li
+  position: relative
+  min-height: 100px
   
-  li:not(:last-child)
-    margin-right: $spacing
+  &:before
+    counter-increment: book-content
+    content: counter(book-content)
+    display: block
+    font-size: 120px
+    font-weight: bold
+    color: $blue
+    left: $spacing
+    top: -60px
+    position: absolute
+    opacity: .10
+    
+@media screen and (min-width: 48em)    
+    
+  .list-spaced-base
+    
+    li:not(:last-child)
+      margin-right: $spacing
+
+@media screen and (min-width: 30em)
+      
+  .list-counter li
+    min-height: 150px
+    width: 50%
+    float: left

@@ -15,14 +15,15 @@
 .wf-active
   h1, h2, h3, h4, h5 
     font-family: $font-family-soleil
-    font-weight: $font-weight-regular-headings
+    font-weight: $font-weight-regular
 
 h1, h2, h3, h4, h5, strong
   color: black
     
-h1, h2, h3, h4, h5 
+h1, h2, h3
   margin: $spacing 0
   line-height: $line-height-headings
+  text-align: center
   
 body
   font-size: $font-size-base
@@ -37,12 +38,10 @@ h1
 
 h2
   font-size: $font-size-h2
+  text-transform: uppercase
   
 h3
   font-size: $font-size-h3
-  
-h4
-  font-size: $font-size-h4
   
 .txt-up
   text-transform: uppercase
@@ -68,4 +67,17 @@ h4
   padding: 2px 5px
   background-color: $yellow
   color: $gray-light
+    
+@media screen and (max-width: 48em)
+
+  h1
+    font-size: $font-size-h1-mobile
+    
+  .txt-lg
+    font-size: $font-size-base
+    
+@media screen and (min-width: 60em)
+
+  h1, h2, h3
+    margin: $spacing-lg 0
   
