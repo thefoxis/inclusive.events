@@ -6,6 +6,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     
     link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="css/normalize.min.css")
     link(rel="icon", type="image/png", href="img/favicon.png")
     
     title= title
@@ -16,9 +17,10 @@ html(lang="en")
       
   body
     .container-fluid
+      != partial("_shared/header")
       main(role="main")
-        != partial("_shared/header")
         != yield
-        != partial("_shared/footer")
+      
+      != partial("_shared/footer")
       
     != partial("_shared/analytics")

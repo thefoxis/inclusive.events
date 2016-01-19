@@ -3,3 +3,19 @@
 * HEADER 
 *
 --------------------------------------------------------------------*/
+
+header
+
+  nav li
+    text-transform: uppercase
+    
+  .nav-item-highlighted
+    border-bottom: 2px solid $yellow
+    
+@media screen and (max-width: 48em)
+
+  nav a
+    font-size: $font-size-sm
+    
+  .list-spaced-base li:not(:last-child)
+    margin-right: $spacing-sm
