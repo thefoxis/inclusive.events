@@ -4,43 +4,11 @@
 *
 --------------------------------------------------------------------*/
 
-header
-
-  nav li
-    text-transform: uppercase
-    
-  .nav-item-highlighted
-    border-bottom: 2px solid $yellow
-    
-@media screen and (max-width: 20em)
-
-  .list-spaced-base li
-    width: 50%
-    margin: 0
-    border-top: 2px solid black
-    box-sizing: border-box
-    
-    &:nth-child(1),
-    &:nth-child(3)
-      border-right: 2px solid black
-    
-    &:last-child
-      width: 100%
-      border-bottom: 2px solid black
-    
-@media screen and (min-width: 21em) and (max-width: 48em)
-    
-  .list-spaced-base li:not(:last-child)
-    margin-right: $spacing-sm
-    
-@media screen and (max-width: 48em)
-
-  nav a
-    font-size: $font-size-sm
-    
-@media screen and (min-width: 21em)
-
-  nav
-    width: 90%
-    margin: 0 auto
-    margin-top: $spacing
+.header-container  
+  display: flex
+  align-items: center
+  justify-content: center  
+  height: 85vh
+  
+  header
+    max-width: 800px

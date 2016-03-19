@@ -6,9 +6,31 @@
 
 body
   counter-reset: book-content
-  
+
 a, a:visited, a:active
-  color: $green
+  color: $blue
+  
+a:hover
+  color: $blue-light
   
 a, a:active, a:hover
   text-decoration: none
+  
+.list-book-content
+  
+  li
+    position: relative
+    padding-left: 50px
+    
+    &:not(:last-child)
+      border-bottom: 2px dotted $gray-light
+    
+    &:before
+      position: absolute
+      top: 0
+      left: 0
+      color: $blue-light
+      font-family: $font-family-ff-meta
+      font-size: $font-size-xlg
+      counter-increment: book-content
+      content: counter(book-content)

@@ -6,32 +6,32 @@
 
 .wf-loading 
   body,
-  h1, h2, h3, h4, h5
+  h1, h2, h3, h4, h5, h6
     font-family: $font-family-sans-fallback
 
 .wf-active body
   font-family: $font-family-acumin
 
 .wf-active
-  h1, h2, h3, h4, h5 
+  h1
+    font-family: $font-family-ff-meta
+    
+  h1, h2, h3, h4, h5, h6
+    font-weight: $font-weight-bold
+
+  h2, h3, h4, h5, h6 
     font-family: $font-family-acumin
-    font-weight: $font-weight-regular
 
 h1, h2, h3, h4, h5, strong
   color: black
-    
-h1, h2, h3
-  margin: $spacing 0
   line-height: $line-height-headings
-  text-align: center
   
 body
   font-size: $font-size-base
   line-height: $line-height-base
   
-p, ul
-  margin-top: 0
-  margin-bottom: $spacing
+p, blockquote
+  margin: 0 0 30px 0
   
 .txt-up
   text-transform: uppercase
@@ -39,9 +39,9 @@ p, ul
 .txt-sm
   font-size: $font-size-sm
   
-.highlight
-  display: inline-block
-  padding: 2px 5px
-  background-color: $yellow
-  color: $gray-light
+.txt-large
+  font-size: 3rem
   
+.highlight
+  border-bottom: 5px solid $yellow
+  font-weight: $font-weight-bold
