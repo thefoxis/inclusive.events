@@ -1,40 +1,42 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
-var harp        = require('harp');
-
-/**
- * Serve the Harp Site from the src directory
- */
-gulp.task('serve', function () {
-  harp.server(__dirname + '/_harp', {
-    port: 9000
-  }, function () {
-    browserSync({
-      proxy: "localhost:9000",
-      open: false,
-      /* Hide the notification. It gets annoying */
-      notify: {
-        styles: ['opacity: 0', 'position: absolute']
-      }
-    });
-    /**
-     * Watch for scss changes, tell BrowserSync to refresh main.css
-     */
-    gulp.watch("_harp/public/css/*.styl", function () {
-      reload("main.css", {stream: true});
-    });
-    /**
-     * Watch for all other changes, reload the whole page
-     */
-    gulp.watch(["_harp/public/*.jade", "_harp/public/*.json"], function () {
-      reload();
-    });
-  })
+var gulp         = require('gulp'),
+    concat       = require('gulp-concat'),
+    postcss      = require('gulp-postcss'),
+    cssnext      = require('gulp-cssnext'),
+    cssnano      = require('cssnano'),
+    connect      = require('gulp-connect'),
+    simplevars   = require('postcss-simple-vars'),
+    cssimport    = require('postcss-import');
+ 
+var srcHTML      = "index.html";
+var srcCSS       = "src/*.css";
+ 
+gulp.task('connect', function() {
+  connect.server({
+    livereload: true
+  });
 });
 
-/**
- * Default task, running just `gulp` will compile the sass,
- * compile the harp site, launch BrowserSync & watch files.
- */
-gulp.task('default', ['serve']);
+gulp.task('css', function(){
+  var processors = [
+    cssimport(),
+    simplevars(),
+    cssnext(),
+    cssnano()
+  ];
+  return gulp.src('./src/main.css')
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./css/'))
+    .pipe(connect.reload());
+});
+ 
+gulp.task('html', function () {
+  gulp.src(srcHTML)
+    .pipe(connect.reload());
+});
+ 
+gulp.task('watch', function () {
+  gulp.watch(srcHTML, ['html']);
+  gulp.watch(srcCSS, ['css']);
+});
+ 
+gulp.task('default', ['connect', 'watch']);
