@@ -19,7 +19,7 @@ gulp.task('connect', function() {
 gulp.task('css', function(){
   var processors = [
     cssimport(),
-    simplevars(),
+    simplevars()
     cssnext(),
     cssnano()
   ];

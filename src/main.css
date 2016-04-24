@@ -1,3 +1,7 @@
+@import 'components/typo';
+
 $red: red;
 
-@import '/src/components/typo.css';
+body {
+  color: $red;
+}

@@ -1,0 +1,10 @@
+$font-meta   : "ff-meta-serif-web-pro", Georgia, Times, serif;
+$font-acumin : "acumin-pro", -apple-system, BlinkMacSystemFont, Helvetica, Helvetica Neue, Ubuntu, Segoe ui, Arial, sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-meta;
+}
+
+body {
+  font-family: $font-acumin;
+}

@@ -1,1 +1,9 @@
-@import '/src/components/typo.css';
+h1, h2, h3, h4, h5, h6 {
+  font-family: "ff-meta-serif-web-pro", Georgia, Times, serif;
+}
+body {
+  font-family: "acumin-pro", -apple-system, BlinkMacSystemFont, Helvetica, Helvetica Neue, Ubuntu, Segoe ui, Arial, sans-serif;
+}
+body {
+  color: red;
+}
