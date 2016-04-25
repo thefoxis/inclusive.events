@@ -1,14 +1,13 @@
 var gulp         = require('gulp'),
-    concat       = require('gulp-concat'),
-    postcss      = require('gulp-postcss'),
-    cssnext      = require('gulp-cssnext'),
-    cssnano      = require('cssnano'),
     connect      = require('gulp-connect'),
+    postcss      = require('gulp-postcss'),
+    cssnext      = require('postcss-cssnext'),
     simplevars   = require('postcss-simple-vars'),
-    cssimport    = require('postcss-import');
+    cssimport    = require('postcss-import'),
+    cssnano      = require('cssnano');
  
 var srcHTML      = "index.html";
-var srcCSS       = "src/*.css";
+var srcCSS       = "./src/**/*.css";
  
 gulp.task('connect', function() {
   connect.server({
@@ -19,7 +18,7 @@ gulp.task('connect', function() {
 gulp.task('css', function(){
   var processors = [
     cssimport(),
-    simplevars()
+    simplevars(),
     cssnext(),
     cssnano()
   ];

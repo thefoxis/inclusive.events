@@ -1,9 +1,1 @@
-h1, h2, h3, h4, h5, h6 {
-  font-family: "ff-meta-serif-web-pro", Georgia, Times, serif;
-}
-body {
-  font-family: "acumin-pro", -apple-system, BlinkMacSystemFont, Helvetica, Helvetica Neue, Ubuntu, Segoe ui, Arial, sans-serif;
-}
-body {
-  color: red;
-}
+.wf-inactive body,.wf-loading body{font-family:Georgia,Times,serif}.wf-inactive h1,.wf-inactive h2,.wf-inactive h3,.wf-inactive h4,.wf-inactive h5,.wf-inactive h6,.wf-loading h1,.wf-loading h2,.wf-loading h3,.wf-loading h4,.wf-loading h5,.wf-loading h6{font-family:-apple-system,BlinkMacSystemFont,Helvetica,Helvetica Neue,Ubuntu,Segoe ui,Arial,sans-serif}.wf-active body{font-family:"ff-meta-serif-web-pro",Georgia,Times,serif}.wf-active h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-active h6{font-family:acumin-pro,-apple-system,BlinkMacSystemFont,Helvetica,Helvetica Neue,Ubuntu,Segoe ui,Arial,sans-serif}body{font-size:18px;font-size:1.125rem}.link{color:#16a973}.link :hover{color:inherit}main .link{border-bottom:1px solid #16a973}footer .link,nav .link{font-family:acumin-pro,-apple-system,BlinkMacSystemFont,Helvetica,Helvetica Neue,Ubuntu,Segoe ui,Arial,sans-serif}

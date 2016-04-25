@@ -1,10 +1,45 @@
-$font-meta   : "ff-meta-serif-web-pro", Georgia, Times, serif;
-$font-acumin : "acumin-pro", -apple-system, BlinkMacSystemFont, Helvetica, Helvetica Neue, Ubuntu, Segoe ui, Arial, sans-serif;
+.wf-loading,
+.wf-inactive {
+  
+  & body {
+    font-family: $font-meta-fallback;
+  }
+  
+  & h1, & h2, & h3, & h4, & h5, & h6 {
+    font-family: $font-acumin-fallback;
+  }
+  
+}
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-meta;
+.wf-active {
+  
+  & body {
+    font-family: $font-meta;    
+  }
+  
+  & h1, & h2, & h3, & h4, & h5, & h6 {
+    font-family: $font-acumin;
+  }
+  
 }
 
 body {
+  font-size: 1.125rem;
+}
+
+.link {
+  color: $green;
+  
+  & :hover {
+    color: inherit;
+  }
+}
+
+main .link {
+  border-bottom: 1px solid $green;
+}
+
+nav .link,
+footer .link {
   font-family: $font-acumin;
 }

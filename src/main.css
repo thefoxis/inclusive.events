@@ -1,7 +1,2 @@
+@import 'globals/variables';
 @import 'components/typo';
-
-$red: red;
-
-body {
-  color: $red;
-}

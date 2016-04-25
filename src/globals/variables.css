@@ -1,0 +1,7 @@
+$font-meta           : "ff-meta-serif-web-pro", Georgia, Times, serif;
+$font-acumin         : "acumin-pro", -apple-system, BlinkMacSystemFont, Helvetica, Helvetica Neue, Ubuntu, Segoe ui, Arial, sans-serif;
+
+$font-meta-fallback  : Georgia, Times, serif;
+$font-acumin-fallback: -apple-system, BlinkMacSystemFont, Helvetica, Helvetica Neue, Ubuntu, Segoe ui, Arial, sans-serif;
+
+$green               : #16A973;
